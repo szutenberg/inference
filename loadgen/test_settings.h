@@ -185,7 +185,7 @@ struct TestSettings {
   /// If true it concatenates a multiple permutation of the dataset (or a 
   /// part of it depending on QSL->PerformanceSampleCount()) several times  
   /// up to the number of samples requested.
-  bool sample_concatenate_permutation = false;
+  bool sample_concatenate_permutation = true;
   /**@}*/
 
   // ==================================
@@ -263,10 +263,10 @@ struct TestSettings {
   /// \brief Overrides QSL->PerformanceSampleCount() when non-zero
   uint64_t performance_sample_count_override = 0;
   /// \brief Measure token latencies
-  bool use_token_latencies = false;
+  bool use_token_latencies = true;
   /// Token latency parameters
-  uint64_t server_ttft_latency = 100000000;
-  uint64_t server_tpot_latency = 100000000;
+  uint64_t server_ttft_latency = 2000000000;
+  uint64_t server_tpot_latency = 200000000;
   /**@}*/
 };
 
